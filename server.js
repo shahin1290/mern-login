@@ -6,8 +6,12 @@ connectDB()
 
 
 app.get('/', function(req, res) {
-    res.send('hello');
+    res.send('API running');
 });
+
+
+app.use('/api/users', require('./routes/api/users'))
+
 
 const PORT = process.env.PORT || 5000;
 
